@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// Import des composants depuis les fichiers correspondants
+import Contact from "./components/Contact";
+import Content from "./components/Content";
+import Hero from "./components/Hero";
 
+// Composant principal App qui rend les autres composants
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        // Conteneur principal englobant les composants Hero, Content, et Contact
+        <div>
+            {/* Composant Hero pour la section d'en-tête */}
+            <Hero/>
+            {/* Composant Content pour la section de contenu */}
+            <Content/>
+            {/* Composant Contact pour la section de contact */}
+            <Contact/>
+        </div>
+    );
 }
 
+// Export du composant App
 export default App;
